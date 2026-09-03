@@ -1,6 +1,6 @@
-<div class="flex max-lg:flex-col-reverse sm:justify-between pt-10 lg:pt-31.5 lg:mb-27.5 max-xl:gap-2 p-2 max-xxl:px-4 xxl:max-w-[1320px] xxl:mx-auto introduction-profile-background" id="introduction">
-    <div class="w-full flex flex-col justify-center max-lg:text-center">
-        <div class="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
+<div class="flex max-lg:flex-col-reverse sm:justify-between pt-10 lg:mb-27.5 max-xl:gap-2 p-2 max-xxl:px-4 xxl:max-w-[1320px] xxl:mx-auto introduction-profile-background" id="introduction">
+    <div class="w-full flex flex-col justify-start max-lg:text-center">
+        <div class="pt-12 lg:pt-24 me-31.5 w-full lg:w-auto transition-all duration-500">
             <p class="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
                 Hello, I'm
                 <span class="text-nowrap shrink-0 inline-block w-full">{{ $profile->name ?? 'Your Name' }}</span>
@@ -22,7 +22,7 @@
                 </a>
             </p>
         </div>
-        <div class="mx-auto lg:mx-0 relative mt-10">
+        <div class="mx-auto lg:mx-0 relative mt-8">
             <div class="flex max-md:justify-center">
                 <a class="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px]" href="#portfolio">
                     My Projects
