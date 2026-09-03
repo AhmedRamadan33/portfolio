@@ -81,7 +81,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'title' => 'LexOffice – Legal Office Management System',
-                'description' => 'Developed a full-featured e-learning platform with course management, enrollments, exams, certificates, progress tracking, and role-based access control. Integrated multiple payment gateways including Stripe, Paymob, PayTabs, PayPal, and Fawry. Integrated VdoCipher for secure video streaming and Zoom/Google Meet for live classes. Implemented notifications, student–instructor chat, activity logging, queues, scheduled jobs, and RESTful APIs. Designed maintainable backend architecture using Laravel Services, Eloquent ORM, MySQL, authentication, authorization, and validation.',
+                'description' => 'Built a multi-branch legal management platform with role-based access control and Arabic/English localization. Developed modules for clients, cases, sessions, courts, tasks, invoices/payments, expenses, documents, notifications, and activity logging. Implemented a client portal and CMS for firm content management, along with branch-based data scoping, media management, and permission-based workflows.',
                 'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST API', 'Bootstrap'],
                 'github_url' => 'https://github.com/AhmedRamadan33/lexOffice',
                 'live_url' => 'https://lexoffice.codeversetechno.com/',
