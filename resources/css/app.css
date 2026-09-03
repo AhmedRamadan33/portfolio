@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Work Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --breakpoint-xxs: 21.25rem;
+    --breakpoint-xs: 23.125rem;
+    --breakpoint-xxl: 82.5rem;
+    --color-picto-primary: #9929fb;
+    --color-picto-primary-dark: #650fa0;
+    --color-soft-white: #f0f1f3;
+    --color-soft-dark: #87909d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+::selection {
+    background-color: color-mix(in oklab, var(--color-picto-primary) 60%, transparent);
+    color: white;
+}
+
+.btn-primary {
+    @apply bg-picto-primary border-0 text-white hover:scale-[102%] hover:bg-picto-primary-dark transition-all duration-500;
+}
+
+.content {
+    @apply max-xxl:w-full xxl:max-w-[1320px] xxl:mx-auto;
+}
+
+.section-title {
+    @apply md:font-semibold text-3xl sm:text-4xl md:text-5xl font-medium;
+}
+
+.center {
+    @apply flex justify-center items-center;
+}
+
+.bg-highlight {
+    background: linear-gradient(to top, #ffc8c8 40%, transparent 40%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.introduction-profile-background {
+    background: radial-gradient(circle at 12% 100%, #ffe2b0f5 1% 5px, transparent 15%),
+        radial-gradient(circle at 95% -15%, #da4df166 5%, transparent 30%),
+        radial-gradient(circle at center right, #c4f5e9b2 2%, transparent 35%);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
