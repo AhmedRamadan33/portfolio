@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
             [
                 'title' => 'ERP System',
                 'description' => 'Developed and maintained a large-scale Enterprise Resource Planning (ERP) solution supporting end-to-end business operations across finance, accounting, inventory, procurement, sales, CRM, HR, payroll, POS, and business analytics. Implemented financial workflows including invoicing, payments, expenses, journal entries, tax management, and financial reporting. Built inventory and supply chain modules covering warehouses, stock movements, purchasing, suppliers, product management, and order processing. Developed employee and customer management modules with configurable workflows and Role-Based Access Control (RBAC). Integrated third-party services including payment gateways, email notifications, and external business APIs.',
-                'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST API', 'bootstrap'],
+                'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST API', 'Bootstrap'],
                 'github_url' => 'https://github.com/AhmedRamadan33/erp.codeverse',
                 'live_url' => 'https://erp.codeversetechno.com/',
                 'featured' => true,
@@ -64,12 +64,32 @@ class DatabaseSeeder extends Seeder
             [
                 'title' => 'Edvora lms',
                 'description' => 'Developed a full-featured e-learning platform with course management, enrollments, exams, certificates, progress tracking, and role-based access control. Integrated multiple payment gateways including Stripe, Paymob, PayTabs, PayPal, and Fawry. Integrated VdoCipher for secure video streaming and Zoom/Google Meet for live classes. Implemented notifications, student–instructor chat, activity logging, queues, scheduled jobs, and RESTful APIs. Designed maintainable backend architecture using Laravel Services, Eloquent ORM, MySQL, authentication, authorization, and validation.',
-                'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST API', 'bootstrap'],
+                'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST API', 'Bootstrap'],
                 'github_url' => 'https://github.com/AhmedRamadan33/edvora-lms',
                 'live_url' => 'https://edvora.codeversetechno.com/',
                 'featured' => true,
                 'order' => 1,
             ],
+            [
+                'title' => 'TimeDoc EG – Clinic Management System',
+                'description' => 'Built a comprehensive clinic management platform with bilingual Arabic/English support and role-based access control. Developed modules for patient management, appointments, visits, doctors, schedules, medical records, invoices/payments, diagnostic tests and results, and clinic administration. Designed service/repository-based business logic, role-specific dashboards, appointment scheduling and collision validation, and RESTful APIs using Laravel Sanctum. Added extensive feature testing covering core clinical and administrative workflows.',
+                'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST API', 'Bootstrap'],
+                'github_url' => 'https://github.com/AhmedRamadan33/timedoc-eg',
+                'live_url' => 'https://timedoc-eg.codeversetechno.com',
+                'featured' => true,
+                'order' => 2,
+            ],
+            [
+                'title' => 'LexOffice – Legal Office Management System',
+                'description' => 'Developed a full-featured e-learning platform with course management, enrollments, exams, certificates, progress tracking, and role-based access control. Integrated multiple payment gateways including Stripe, Paymob, PayTabs, PayPal, and Fawry. Integrated VdoCipher for secure video streaming and Zoom/Google Meet for live classes. Implemented notifications, student–instructor chat, activity logging, queues, scheduled jobs, and RESTful APIs. Designed maintainable backend architecture using Laravel Services, Eloquent ORM, MySQL, authentication, authorization, and validation.',
+                'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST API', 'Bootstrap'],
+                'github_url' => 'https://github.com/AhmedRamadan33/lexOffice',
+                'live_url' => 'https://lexoffice.codeversetechno.com/',
+                'featured' => true,
+                'order' => 3,
+            ],
+
+
         ];
         foreach ($projects as $project) {
             Project::updateOrCreate(['title' => $project['title']], $project);
