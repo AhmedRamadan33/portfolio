@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
             ['name' => 'REST APIs', 'category' => 'backend', 'level' => 100],
             ['name' => 'JavaScript', 'category' => 'frontend', 'level' => 95],
             ['name' => 'Tailwind CSS', 'category' => 'frontend', 'level' => 95],
-            ['name' => 'Bootstrap', 'category' => 'frontend', 'level' => 60],
+            ['name' => 'Bootstrap', 'category' => 'frontend', 'level' => 100],
             ['name' => 'Git', 'category' => 'tools', 'level' => 95],
         ];
         foreach ($skills as $i => $skill) {
