@@ -37,16 +37,51 @@ class DatabaseSeeder extends Seeder
             'whatsapp_url' => 'https://wa.me/+201505611560',
         ]);
 
-        $skills = [
+              $skills = [
+            // Backend
             ['name' => 'PHP', 'category' => 'backend', 'level' => 100],
             ['name' => 'Laravel', 'category' => 'backend', 'level' => 100],
-            ['name' => 'MySQL', 'category' => 'database', 'level' => 100],
             ['name' => 'REST APIs', 'category' => 'backend', 'level' => 100],
+            ['name' => 'Livewire', 'category' => 'backend', 'level' => 95],
+            ['name' => 'Authentication & Authorization', 'category' => 'backend', 'level' => 100],
+            ['name' => 'RBAC', 'category' => 'backend', 'level' => 100],
+
+            // Frontend
             ['name' => 'JavaScript', 'category' => 'frontend', 'level' => 95],
+            ['name' => 'HTML5', 'category' => 'frontend', 'level' => 100],
+            ['name' => 'CSS3', 'category' => 'frontend', 'level' => 100],
             ['name' => 'Tailwind CSS', 'category' => 'frontend', 'level' => 95],
             ['name' => 'Bootstrap', 'category' => 'frontend', 'level' => 100],
+            ['name' => 'Responsive Design', 'category' => 'frontend', 'level' => 95],
+
+            // Database
+            ['name' => 'MySQL', 'category' => 'database', 'level' => 100],
+            ['name' => 'Database Design', 'category' => 'database', 'level' => 100],
+            ['name' => 'Query Optimization', 'category' => 'database', 'level' => 95],
+            ['name' => 'Database Optimization', 'category' => 'database', 'level' => 95],
+
+            // Architecture & Engineering
+            ['name' => 'MVC Architecture', 'category' => 'architecture', 'level' => 100],
+            ['name' => 'Object-Oriented Programming', 'category' => 'architecture', 'level' => 100],
+            ['name' => 'Clean Code', 'category' => 'architecture', 'level' => 95],
+            ['name' => 'Software Architecture', 'category' => 'architecture', 'level' => 95],
+            ['name' => 'Scalable Systems', 'category' => 'architecture', 'level' => 95],
+
+            // Integrations
+            ['name' => 'Third-Party Integrations', 'category' => 'integration', 'level' => 95],
+            ['name' => 'Payment Gateways', 'category' => 'integration', 'level' => 95],
+            ['name' => 'Real-Time Applications', 'category' => 'integration', 'level' => 95],
+            ['name' => 'Pusher', 'category' => 'integration', 'level' => 95],
+            ['name' => 'Webhooks', 'category' => 'integration', 'level' => 95],
+
+            // Tools & DevOps
             ['name' => 'Git', 'category' => 'tools', 'level' => 95],
+            ['name' => 'GitHub', 'category' => 'tools', 'level' => 95],
+            // ['name' => 'Composer', 'category' => 'tools', 'level' => 100],
+            // ['name' => 'Linux', 'category' => 'tools', 'level' => 85],
+            // ['name' => 'Docker', 'category' => 'tools', 'level' => 85],
         ];
+
         foreach ($skills as $i => $skill) {
             Skill::updateOrCreate(['name' => $skill['name']], $skill + ['order' => $i]);
         }
