@@ -1,4 +1,4 @@
-<div class="reveal relative mx-4 xxl:mx-auto xxl:max-w-[1320px] -bottom-20 lg:-bottom-28 z-10 rounded-2xl bg-white drop-shadow-2xl max-xl:mb-5 shadow-white xl:p-28 lg:p-20 md:p-16 sm:p-10 p-4" id="profile">
+<div class="reveal relative mx-4 xxl:mx-auto xxl:max-w-[1320px] bottom-20 lg:bottom-28 z-10 rounded-2xl bg-white drop-shadow-2xl max-xl:mb-5 shadow-white xl:p-28 lg:p-20 md:p-16 sm:p-10 p-4" id="profile">
     <div class="flex max-md:flex-col justify-between items-center gap-6">
         <div class="xxl:max-w-106 w-auto h-auto xxl:max-h-126">
             <div class="max-w-106 h-117 w-full overflow-hidden rounded-xl bg-soft-white center">
