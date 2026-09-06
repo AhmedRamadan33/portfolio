@@ -59,6 +59,11 @@
 </head>
 <body class="relative bg-white text-gray-900 antialiased">
 
+    <noscript><style>#preloader { display: none !important; }</style></noscript>
+    <div id="preloader" role="presentation" aria-hidden="true">
+        <img src="{{ asset('img/codeverse-logo.png') }}" alt="" width="220" height="76">
+    </div>
+
     @php
         $navItems = [
             ['id' => 1, 'name' => 'Home', 'url' => 'introduction'],

@@ -1,5 +1,19 @@
 import './bootstrap';
 
+const hidePreloader = () => {
+    const preloader = document.getElementById('preloader');
+    if (!preloader) return;
+
+    preloader.classList.add('is-hidden');
+    preloader.addEventListener('transitionend', () => preloader.remove(), { once: true });
+};
+
+if (document.readyState === 'complete') {
+    hidePreloader();
+} else {
+    window.addEventListener('load', hidePreloader);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
 
