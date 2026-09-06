@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="HNDDrb5cQoensf_rR5XK7xu2vfQ7wZ0mLflPLRLvyR0" />
 
     @php
         $seoName = $profile->name ?? config('app.name');
