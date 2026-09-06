@@ -4,8 +4,52 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $profile->name ?? config('app.name') }} — {{ $profile->title ?? 'Portfolio' }}</title>
-    <meta name="description" content="{{ $profile->tagline ?? '' }}">
+
+    @php
+        $seoName = $profile->name ?? config('app.name');
+        $seoTitle = $seoName . ' — ' . ($profile->title ?? 'Portfolio');
+        $seoDescription = $profile->tagline
+            ?: ($profile->bio ? \Illuminate\Support\Str::limit(trim(preg_replace('/\s+/', ' ', $profile->bio)), 160) : null)
+            ?: "Portfolio of {$seoName}, " . ($profile->title ?? 'developer') . '.';
+        $seoImage = $profile?->avatar_path ? asset('storage/' . $profile->avatar_path) : asset('favicon.ico');
+        $seoUrl = url('/');
+    @endphp
+
+    <title>{{ $seoTitle }}</title>
+    <meta name="description" content="{{ $seoDescription }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ $seoUrl }}">
+
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ $seoName }}">
+    <meta property="og:title" content="{{ $seoTitle }}">
+    <meta property="og:description" content="{{ $seoDescription }}">
+    <meta property="og:url" content="{{ $seoUrl }}">
+    <meta property="og:image" content="{{ $seoImage }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $seoTitle }}">
+    <meta name="twitter:description" content="{{ $seoDescription }}">
+    <meta name="twitter:image" content="{{ $seoImage }}">
+
+    <script type="application/ld+json">
+        {!! json_encode([
+            '@context' => 'https://schema.org',
+            '@type' => 'Person',
+            'name' => $seoName,
+            'jobTitle' => $profile->title ?? null,
+            'url' => $seoUrl,
+            'image' => $seoImage,
+            'email' => $profile->email ?? null,
+            'sameAs' => array_values(array_filter([
+                $profile->github_url ?? null,
+                $profile->linkedin_url ?? null,
+                $profile->twitter_url ?? null,
+            ])),
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=work-sans:400,500,600,700" rel="stylesheet" />
